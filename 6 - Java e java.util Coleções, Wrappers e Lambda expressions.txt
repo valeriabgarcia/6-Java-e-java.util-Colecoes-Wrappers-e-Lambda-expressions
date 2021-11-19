@@ -1,0 +1,75 @@
+https://cursos.alura.com.br/formacao-java
+https://cursos.alura.com.br/course/java-util-lambdas
+
+Na barra de menu superior, na opção "Source", selecionaremos a opção "Organize Imports", 
+podemos acessar esta opção também por meio do atalho "Shift + Command + O/Shift + Ctrl + O".
+
+
+1 - CONHECENDO ARRAYS 
+Um array é uma estrutura de dados e serve para guardar elementos (valores primitivos ou referências)
+Arrays usam colchetes ([]) sintaticamente
+Arrays têm um tamanho fixo!
+Um array também é um objeto!
+Arrays são zero-based (o primeiro elemento se encontra na posição 0)
+Um array é sempre inicializado com os valores padrões.
+Ao acessar uma posição inválida recebemos a exceção ArrayIndexOutOfBoundException
+Arrays possuem um atributo length para saber o tamanho
+A forma literal de criar uma Array, com o uso de chaves {}.
+
+2 - GUARDANDO QUALQUER REFERÊNCIA
+uma array do tipo Object pode guardar qualquer tipo de referência
+quando convertemos uma referência genérica para uma referência mais específica é preciso usar um type cast
+o cast só compila quando é possível, mesmo assim pode falhar na hora de rodar
+quando o type cast falha podemos receber uma ClassCastException
+para receber valores ao chamar o programa Java na linha de comando podemos usar o array String[] no método main
+
+3 - ARRAYLIST E GENERICS
+A classe java.util.ArrayList encapsula o uso do array e oferece vários métodos de mais alto nível
+Uma lista guarda referencias
+<> Generics - usamos para não misturar os tipos de referências
+Usar métodos size, get, remove
+Usar o foreach para iterar a ArrayList
+Os generics parametrizam classes
+No caso da ArrayList podemos definir o tipo dos elementos através de generics
+ArrayList é um array dinâmico
+
+4 - EQUALS E MAIS LISTAS
+Implementar o método equals para definir a igualdade
+O método equals é utilizado pelas listas
+Existe mais uma lista, a java.util.LinkedList 
+	- com o LinkedList, apagar um elemento não causa grande impacto à ela como um todo, ela o descarta e substitui com o seguinte e o anterior.
+	- diferentemente do array, não temos como acessar uma determinada posição diretamente.
+A LinkedList é uma lista duplamente "linkada" e a ArrayList representa um array com redimensionamento dinâmico.
+List é uma interface, a ArrayList e a LinkedList são implementações
+Interface java.util.List que define os métodos da lista
+
+5 - VECTOR E A INTERFACE COLLECTION
+Quando desejamos que as execuções sejam feitas em paralelo, em cima de uma mesma lista, utilizamos o java.util.Vector
+O java.util.Vector, que é uma ArrayList thread safe
+a interface java.util.Collection que é a interface de todas as coleções
+as listas são sequencias que aceitam elementos duplicados
+os conjuntos (java.util.Set) também são coleções, mas não aceitam duplicados nem são listas
+
+6 - AS CLASSES WRAPPERS
+Para cada primitivo existe uma classe chamada Wrapper
+Para guardar um primitivo numa coleção é preciso criar um objeto que embrulha o valor
+A criação do objeto Wrapper é chamada de autoboxing
+A retirada do valor primitivo do objeto Wrapper é chamada de unboxing
+Autoboxing e unboxing acontecem automaticamente.
+As classes wrapper possuem vários métodos auxiliares, por exemplo para o parsing
+Todas as classes wrappers que representam um valor numérico possuem a classe java.lang.Number como mãe
+
+7 - ORDENAÇÃO DE LISTAS
+para ordenar uma lista é preciso definir um critério de ordenação
+há duas formas de definir esse critério
+	pela interface Comparator
+	pela interface Comparable (ordem natural)
+o algoritmo de ordenação já foi implementado
+	na lista no método sort
+	na classe Collections pelo método sort
+a classe Collections é uma fachada com vários métodos auxiliares para trabalhar com as coleções, principalmente listas
+ordem natural é a ordem definida pelo próprio elemento da lista.
+
+8 - CLASSES ANÔNIMAS E LAMBDAS
+Os objetos, que são criados com o único objetivo de encapsular uma função/método/procedimento, são chamados de Function Objects
+lambdas facilitam ainda mais o trabalho com funções
